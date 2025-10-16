@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    background-color:#6da6cf;
+    font-family: 'Poppins',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+.logo-kei{
+    position: absolute;
+    width: 250px;
+    margin: 40px ;
+}
+.banner .clouds {
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.banner .clouds img {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    animation: animate calc(8s * var(--i)) ease-in-out infinite;
+}
+@keyframes animate {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+section{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-buttons{
+    width: 30%;
+    height: 10%;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.drone{
+    position: absolute;
+    width: 300px;
+    right: 10px;
+    top:350px;
+    animation: bounce infinite 2s ease-in-out;
+}
+
+
+.title-home{
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 20px;
+    animation: show 1.5s ease-in-out;
+}
+@keyframes show {
+
+    to{
+        transform: scale(1);
+        opacity:.9;
+    }
+    from{
+        transform: scale(1.5);
+
+        opacity: 1;
+    }
+    
+}
+
+
+.btn{
+    background-color:#ff6400;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    z-index: 100;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.199);
+    font-family: 'Poppins',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.btn:hover{
+    transition: all .2s ease-in-out;
+    background-color: #e45b00;
+    transform: scale(1.1);
+}
+.btn:active{
+    background-color: #e45b00;
+    transition: all .1s ease-in-out;
+    transform: scale(1);
+    
+    
+}
+.section-problema{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.drone-problema{
+    width: 200px;
+    position: absolute;
+    left: 80px;
+    top: 20px;
+    animation: bounce 2s infinite ease-in-out;
+    animation: move-arround infinite 8s ease-in-out;
+
+}
+@keyframes move-arround {
+     0% {
+        transform: translate(0, 0); /* punto inicial */
+    }
+    25% {
+        transform: translate(635px, 0); /* avanza a la derecha */
+    }
+    50% {
+        transform: translate(635px, 50px); /* baja */        
+    }
+    75% {
+        transform: translate(635px, 0); /* sube */
+    }
+    100% {
+        transform: translate(0, 0); /* regresa al inicio */
+    }
+    
+}
+.main-container-article{
+    width: 90vw;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.title-problema{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    
+    
+}
+.explicacion-problema{
+    width:55%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    color: #ffffff;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.emergencia{
+    color: rgb(192, 45, 45);
+}
+.section-problema button{
+    width:500px;
+}
+.container-button{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.explicacion-problema h3{
+    font-size:1.5rem;
+}
+.explicacion-problema p{
+    font-size: 1.2rem;
+    font-family: 'inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.list{
+    font-family: 'inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    padding-left: 15px;
+    font-size: 1.2rem;
+}
+
+.gallery {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #020353;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+/* imagen larga horizontal arriba */
+.larga-h {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+/* imagen larga vertical a la derecha */
+.larga-v {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+/* imágenes pequeñas abajo izquierda */
+.item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+.item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.img-aside{
+    display: block;
+    transition: transform 0.3s;
+    border-radius: 15px;
+    
+}
+
+.item:hover img{
+    transform:scale(1.3);
+    border-radius: 20px;    
+}
+
+
+.footer-problema{
+    font-family: 'inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.footer-problema a{
+    color: #ff6400;
+    
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(40px);
+
+
+
+    }
+    
+    100%{
+        
+        transform: translateY(20px);
+    }
+    
+}
+.section-solucion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.title-solucion-section{
+    font-size: 2rem;
+    margin-top: 20px;
+    color:#ffffff;
+}
+.text-solucion-section{
+    color:#ffffff;
+    font-size: 1.3rem;    
+    font-family: 'inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.kei-colors-solucion{
+    color: #ff6400;
+}
+.explicacion-solucion{
+    width: 90%;
+    height: 80%;
+    
+}
+.contenedor-drones-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.img-drones-cards{
+    width: 200px;
+    z-index:1;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    gap: 20px ;
+    background-color: #FFFFFF;
+    border: 1px solid #01061181;
+    z-index:2;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+
+}
+.cards header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.body-cards{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    font-family: 'inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #010611;
+
+    justify-content: center;
+}
+.footer-cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+
+}
+
+.img-footer{
+    width:40px;
+    margin-bottom: 10px;
+}
+
+.img-header{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    display: block;
+    
+        
+}
+.cards-title{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #010611;
+
+}
+
+.cards:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.06);
+    box-shadow: 0 0 15px #020353;
+}
+
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: #00000079;
+}
+
+.explicacion-impacto{
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.explicacion-impacto h1{
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+
+}
+.explicacion-impacto p{
+    font-family: 'inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 80ch;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.title-impacto{
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+.container-circles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+.circle{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    color:#99cfff;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.171) ;
+    box-shadow: 0 0 20px rgba(150, 217, 255, 0.678);
+ 
+}
+.circle span{
+    margin-top: 15px;
+    font-size: 3rem;
+}
+.circle h3{
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:2rem;
+}
+.circle p{
+    font-family: 'inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    
+}
+
+.circle:hover:nth-child(1) span{
+    animation: bounce-heart 1s infinite ease-in-out;
+}
+@keyframes bounce-heart {
+    0%{
+        transform: scale(1.1);
+
+    }
+    50%{
+        transform: scale(1.3);
+
+    }
+    100%{
+        transform: scale(1.1);
+
+
+    }
+    
+}
+.circle:hover:nth-child(2) span{
+    animation: rotate-sun 2s infinite linear;
+}
+@keyframes rotate-sun {
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+
+    }
+}
+
+.circle:hover:nth-child(3) span{
+    animation:  rotate-sun 1s infinite ease-in-out;
+  
+}
+
+
+.circle:hover {
+    transform: scale(1.07);
+    background: #ffe880ea;
+}
+
+
+
+@media (max-width: 1280px) {
+    .navbar-buttons{
+        width:40% ;
+    
+    }
+    .title-home{
+        font-size: 1.8rem;
+        margin-top: 20%;
+    }
+    .logo-kei{
+        width: 200px;
+    
+    }
+    .drone{
+        top:120px;
+        width: 200px;
+    }
+    .title-problema{
+        font-size: 1.4rem;
+    }
+    .section-problema h3{
+        font-size: 1.25rem;
+    }
+    .explicacion-problema{
+        gap: 15px;
+        margin-top: 50px;
+    }
+    .section-problema p{
+        font-size: 1.25rem;
+    }
+    .drone-problema{
+        width: 150px;
+        top: 0px;
+    }
+    @keyframes move-arround{
+         0% {
+        transform: translate(0, 0); /* punto inicial */
+        }
+        25% {
+            transform: translate(455px, 0); /* avanza a la derecha */
+        }
+        50% {
+            transform: translate(455px,10px); /* baja */        
+        }
+        75% {
+            transform: translate(455px, 0); /* sube */
+        }
+        100% {
+            transform: translate(0, 0); /* regresa al inicio */
+        }
+    
+        
+    }
+    .cards{
+        width: 70%;
+        gap: 10px;
+        
+    }
+    .img-drones-cards{
+        width: 100px;
+    }
+    .section-solucion{
+        gap: 5px;
+        justify-content: flex-start;
+    }
+    
+}
+
+/*
+@media (max-width: 1600px) {
+    
+.navbar-buttons{
+    width:40% ;
+    
+}
+.title-home{
+    font-size: 1.8rem;
+    margin-top: 20%;
+}
+.img{
+    width: 250px;
+    height: auto;
+}
+.asidebar-img{
+    height: 100vh;
+    gap:10px;
+}
+.drone{
+    top:120px;
+    width: 200px;
+}
+.logo-kei{
+    width: 200px;
+    
+}
+.title-problema{
+}
+.article-text-problema{
+    font-size: 1.1rem;
+    max-width: 60ch;
+}
+.footer-problema{
+    font-size: 1rem;
+    text-align: center ;
+}
+.drone-problema{
+    width: 200px;
+    top: 100px;
+    left: -5px;
+}
+
+.cards{
+    width:300px;
+    height: 100%;
+}
+
+.img-drones-cards{
+    width: 100px;
+}
+.section-solucion{
+    gap: 5px;
+}
+
+
+}
+*/
